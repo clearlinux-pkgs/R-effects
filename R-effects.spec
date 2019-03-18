@@ -4,26 +4,24 @@
 #
 Name     : R-effects
 Version  : 4.1.0
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/effects_4.1-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/effects_4.1-0.tar.gz
 Summary  : Effect Displays for Linear, Generalized Linear, and Other Models
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-betareg
-Requires: R-carData
-Requires: R-colorspace
-Requires: R-estimability
-Requires: R-formatR
-Requires: R-lme4
-Requires: R-ordinal
-Requires: R-survey
+Requires: R-car
+Requires: R-minqa
+Requires: R-nloptr
 BuildRequires : R-betareg
+BuildRequires : R-car
 BuildRequires : R-carData
 BuildRequires : R-colorspace
 BuildRequires : R-estimability
 BuildRequires : R-formatR
 BuildRequires : R-lme4
+BuildRequires : R-minqa
+BuildRequires : R-nloptr
 BuildRequires : R-ordinal
 BuildRequires : R-survey
 BuildRequires : buildreq-R
@@ -41,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1543751796
+export SOURCE_DATE_EPOCH=1552903309
 
 %install
-export SOURCE_DATE_EPOCH=1543751796
+export SOURCE_DATE_EPOCH=1552903309
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -80,8 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library effects|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  effects || :
 
 
 %files
@@ -120,3 +117,5 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/effects/help/paths.rds
 /usr/lib64/R/library/effects/html/00Index.html
 /usr/lib64/R/library/effects/html/R.css
+/usr/lib64/R/library/effects/tests/effect-tests-1.R
+/usr/lib64/R/library/effects/tests/effect-tests-2.R
