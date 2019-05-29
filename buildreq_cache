@@ -1,9 +1,11 @@
-4.1.0
+4.1.1
+R-alr4
 R-betareg
 R-car
 R-carData
 R-colorspace
 R-estimability
+R-evaluate
 R-formatR
 R-lme4
 R-minqa
