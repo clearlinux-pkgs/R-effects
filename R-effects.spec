@@ -4,19 +4,16 @@
 #
 Name     : R-effects
 Version  : 4.1.2
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/effects_4.1-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/effects_4.1-2.tar.gz
 Summary  : Effect Displays for Linear, Generalized Linear, and Other Models
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-betareg
 Requires: R-carData
 Requires: R-colorspace
 Requires: R-estimability
-Requires: R-formatR
 Requires: R-lme4
-Requires: R-ordinal
 Requires: R-survey
 BuildRequires : R-betareg
 BuildRequires : R-carData
@@ -28,6 +25,7 @@ BuildRequires : R-ordinal
 BuildRequires : R-survey
 BuildRequires : buildreq-R
 BuildRequires : texlive
+BuildRequires : util-linux
 
 %description
 Graphical and tabular effect displays, e.g., of interactions, for 
@@ -41,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1567570762
+export SOURCE_DATE_EPOCH=1571822654
 
 %install
-export SOURCE_DATE_EPOCH=1567570762
+export SOURCE_DATE_EPOCH=1571822654
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
