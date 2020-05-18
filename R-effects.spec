@@ -4,27 +4,27 @@
 #
 Name     : R-effects
 Version  : 4.1.4
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/effects_4.1-4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/effects_4.1-4.tar.gz
 Summary  : Effect Displays for Linear, Generalized Linear, and Other Models
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-betareg
+Requires: R-car
 Requires: R-carData
 Requires: R-colorspace
 Requires: R-estimability
 Requires: R-formatR
 Requires: R-lme4
-Requires: R-ordinal
 Requires: R-survey
 BuildRequires : R-betareg
+BuildRequires : R-car
 BuildRequires : R-carData
 BuildRequires : R-colorspace
 BuildRequires : R-estimability
 BuildRequires : R-formatR
 BuildRequires : R-lme4
-BuildRequires : R-ordinal
 BuildRequires : R-survey
 BuildRequires : buildreq-R
 BuildRequires : texlive
@@ -35,21 +35,22 @@ Graphical and tabular effect displays, e.g., of interactions, for
 
 %prep
 %setup -q -c -n effects
+cd %{_builddir}/effects
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1574008162
+export SOURCE_DATE_EPOCH=1589779237
 
 %install
-export SOURCE_DATE_EPOCH=1574008162
+export SOURCE_DATE_EPOCH=1589779237
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
