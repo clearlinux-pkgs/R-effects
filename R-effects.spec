@@ -4,7 +4,7 @@
 #
 Name     : R-effects
 Version  : 4.2.0
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/effects_4.2-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/effects_4.2-0.tar.gz
 Summary  : Effect Displays for Linear, Generalized Linear, and Other Models
@@ -15,6 +15,7 @@ Requires: R-carData
 Requires: R-colorspace
 Requires: R-estimability
 Requires: R-formatR
+Requires: R-insight
 Requires: R-lme4
 Requires: R-survey
 BuildRequires : R-car
@@ -41,10 +42,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1597173311
+export SOURCE_DATE_EPOCH=1597360843
 
 %install
-export SOURCE_DATE_EPOCH=1597173311
+export SOURCE_DATE_EPOCH=1597360843
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
