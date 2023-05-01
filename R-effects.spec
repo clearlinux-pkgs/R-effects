@@ -4,7 +4,7 @@
 #
 Name     : R-effects
 Version  : 4.2.2
-Release  : 49
+Release  : 50
 URL      : https://cran.r-project.org/src/contrib/effects_4.2-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/effects_4.2-2.tar.gz
 Summary  : Effect Displays for Linear, Generalized Linear, and Other Models
